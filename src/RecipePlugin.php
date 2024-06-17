@@ -96,8 +96,8 @@ class RecipePlugin implements PluginInterface, EventSubscriberInterface, Capable
         $data = $file->read();
 
         // Remove project and public files from project
-        unset($data['extra'][self::PROJECT_FILES]);
-        unset($data['extra'][self::PUBLIC_FILES]);
+        unset($data['extra'][RecipePlugin::PROJECT_FILES]);
+        unset($data['extra'][RecipePlugin::PUBLIC_FILES]);
 
         // Remove redundant empty extra
         if (empty($data['extra'])) {
